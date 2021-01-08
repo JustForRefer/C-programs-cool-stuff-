@@ -16,6 +16,12 @@ void main()
         y=4-i;
         printf("\nEnter a guess:");
         scanf("%i",&x);
+        if (x>20)
+        {
+            printf("\nSorry,%i is not in the required range.",x);
+            printf("\nYou have %i guesses left\n",y);
+            continue;
+        }
         if (x==ram)
         {
             printf("\nCongratulations.You guessed it");
@@ -33,12 +39,7 @@ void main()
             printf("\nYou have %i guesses left\n",y);
             continue;
         }
-        if (x>20)
-        {
-            printf("\nSorry,%i is not in the required range.",x);
-            printf("\nYou have %i guesses left\n",y);
-            continue;
-        }
+        
     }
    
 }
