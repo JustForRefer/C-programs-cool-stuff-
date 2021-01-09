@@ -1,0 +1,41 @@
+#include<stdio.h>
+void main()
+{
+    float rain[4][6];
+    int i,j,a,b,c,k;
+    float sum=0;
+    float avg;
+    float l=0;
+    for(i=0;i<4;i++)
+    {
+        for(j=0;j<6;j++)
+        {
+            scanf("%f",&rain[i][j]);
+        }
+    }
+    for(a=0;a<4;a++)
+    {
+        for(b=0;b<6;b++)
+        {
+            printf("%.2f ",rain[a][b]);
+            sum=sum+rain[a][b];
+            
+        }
+        printf("\n");
+    }
+    for(c=0;c<6;c++)
+    {
+        l=0.0;
+        for(k=0;k<4;k++)
+        {
+            l=l+rain[k][c];
+        }
+        printf("Rainfall in %i is %f",c+1,l);
+    }
+    avg=sum/3;
+    printf("Sum of total rainfall is %f",sum);
+    printf("Average of total rainfall is %f",avg);
+    
+    
+    
+}
